@@ -21,7 +21,7 @@ import java.util.UUID;
 
 /**
  * @Controller is a program module which listen to user`s requests on path "/greeting",
- * and returns some data, (11.11.2018: it will returns some template to greeting and main files...)
+ * and returns some data, (11.11.2018: it will returns some migration to greeting and main files...)
  */
 @Controller
 public class MainController {
@@ -35,7 +35,7 @@ public class MainController {
     @Value("${upload.path}")
     private String uploadPath;
     /**
-        * @param name - data (parameter) which we transfer to our template
+        * @param name - data (parameter) which we transfer to our migration
         * @param model - instance where we`ll lay data which we want to return
         * @return
        *@GetMapping("/greeting")
