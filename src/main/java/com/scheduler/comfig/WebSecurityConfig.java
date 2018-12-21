@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests() //authorization turns on
-                    .antMatchers("/", "/registration", "/static/**").permitAll() //all users have access to this page
+                    .antMatchers("/", "/registration", "/static/**", "/activate/*").permitAll() //all users have access to this page
                     .anyRequest().authenticated()//for all other pages user shod be authorized
                 .and()
                     .formLogin()//вказуємо форм логін

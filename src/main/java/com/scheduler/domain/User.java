@@ -18,6 +18,10 @@ public class User implements UserDetails {
     private String username;
     private String password;
     private boolean active;
+
+    private String email;
+    private String activationCode;
+
     //targetClass = Role.class
     //fetch = FetchType.EAGER - параметр що визначає як дані значення будуть підвантажуватись відносто основної сущності (юзера)
     //EAGER - жадний, підвантажує одразу всі значення
@@ -94,5 +98,21 @@ public class User implements UserDetails {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
     }
 }
